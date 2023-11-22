@@ -1,10 +1,8 @@
 import React from "react";
 
-type Status = "Done" | "Progress" | "Incomplete";
-
 export type ToDoItemProps = {
   task: string;
-  status: Status;
+  status: "Done" | "Progress" | "Incomplete";
 };
 
 export const TodoItem: React.FC<ToDoItemProps> = ({ task, status }) => {
