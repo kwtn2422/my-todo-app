@@ -1,10 +1,10 @@
 import React from "react";
 
-type Props = {
+export type ToDoItemProps = {
   task: string;
 };
 
-export const TodoItem: React.FC<Props> = ({ task }) => {
+export const TodoItem: React.FC<ToDoItemProps> = ({ task }) => {
   return (
     <div className="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md border">
       <div className="flex items-center justify-center w-12 bg-emerald-500">

@@ -1,8 +1,8 @@
 const TodoForm = () => {
   return (
-    <section className="bg-white">
-      <div className="max-w-3xl px-6 py-4 mx-auto text-center">
-        <div className="flex flex-col mt-8 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:-mx-2">
+    <section className="bg-white rounded-lg pb-4">
+      <div className="max-w-3xl px-6 py-1 mx-auto text-center">
+        <div className="flex flex-col mt-4 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:-mx-2">
           <input
             id="text"
             type="text"

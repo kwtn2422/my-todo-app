@@ -1,5 +1,11 @@
 import TodoForm from "@/components/TodoForm";
-import { TodoItem } from "@/components/TodoItem";
+import TodoItemList from "@/components/TodoItemList";
+import { ToDoItemProps } from "@/components/TodoItem";
+
+const todoItemList: ToDoItemProps[] = [
+  { task: "hogehoge" },
+  { task: "higehige" },
+];
 
 const App = () => {
   return (
@@ -8,8 +14,7 @@ const App = () => {
         <h1 className="text-3xl mb-2 text-center">My ToDo App</h1>
         <div>
           <h2 className="text-xl">ToDo List</h2>
-          <TodoItem task="hogehoge"></TodoItem>
-          <TodoItem task="higehige"></TodoItem>
+          <TodoItemList ListArray={todoItemList}></TodoItemList>
           <TodoForm></TodoForm>
         </div>
       </div>
