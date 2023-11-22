@@ -1,10 +1,27 @@
 import React from "react";
 
+type Status = "Done" | "Progress" | "Incomplete";
+
 export type ToDoItemProps = {
   task: string;
+  status: Status;
 };
 
-export const TodoItem: React.FC<ToDoItemProps> = ({ task }) => {
+export const TodoItem: React.FC<ToDoItemProps> = ({ task, status }) => {
+  let STATUS: string = "";
+
+  switch (status) {
+    case "Done":
+      STATUS = "完了";
+      break;
+    case "Progress":
+      STATUS = "進行中";
+      break;
+    case "Incomplete":
+      STATUS = "未対応";
+      break;
+  }
+
   return (
     <div className="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md border">
       <div className="flex items-center justify-center w-12 bg-emerald-500">
@@ -19,7 +36,7 @@ export const TodoItem: React.FC<ToDoItemProps> = ({ task }) => {
 
       <div className="px-4 py-2 -mx-3">
         <div className="mx-3">
-          <span className="font-semibold text-emerald-500">完了</span>
+          <span className="font-semibold text-emerald-500">{STATUS}</span>
           <p className="text-sm text-gray-600">{task}</p>
         </div>
       </div>

@@ -3,8 +3,8 @@ import TodoItemList from "@/components/TodoItemList";
 import { ToDoItemProps } from "@/components/TodoItem";
 
 const todoItemList: ToDoItemProps[] = [
-  { task: "hogehoge" },
-  { task: "higehige" },
+  { task: "hogehoge", status: "Done" },
+  { task: "higehige", status: "Incomplete" },
 ];
 
 const App = () => {
